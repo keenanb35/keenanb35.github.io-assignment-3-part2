@@ -1,3 +1,6 @@
+/* Import fonts (serious serif body + slab heading) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab:wght@700&display=swap');
+
 /* General setup */
 
 * {
@@ -9,6 +12,12 @@ body {
   padding: 0 20px;
   min-width: 980px;
   max-width: 1400px;
+
+  /* Body font */
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
 }
 
 /* Layout */
@@ -32,4 +41,125 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* ======================
+   HEADINGS
+====================== */
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.08rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+/* First paragraph indentation after headings */
+
+section h2 + p {
+  text-indent: 2rem;
+}
+
+/* ======================
+   PARAGRAPHS
+====================== */
+
+p {
+  margin: 1rem 0;
+}
+
+/* ======================
+   LINKS
+====================== */
+
+a {
+  color: #aa6666;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #884444;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #663333;
+}
+
+/* Remove default focus outline */
+a:focus {
+  outline: none;
+}
+
+/* External link icon */
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  background-image: url("external-link-52.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ======================
+   LISTS
+====================== */
+
+ul, ol {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Custom bullet style */
+
+ul {
+  list-style-type: square;
+}
+
+/* ======================
+   NAVIGATION MENU
+====================== */
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+/* Button-style navigation links */
+
+nav a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #aa6666;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Hover effect */
+
+nav a:hover {
+  background-color: #884444;
 }
